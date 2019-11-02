@@ -6,6 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-//hadam code
+//hadam code add
 
 module.exports = router;
