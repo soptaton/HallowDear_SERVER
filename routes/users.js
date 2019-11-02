@@ -1,8 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router({mergeParams: true});
 
-router.get('/:userIdx', (req, res) => {
-  Comment.read(req.params.articleIdx,req.params.commentIdx).then(({
+const statusCode = require('../module/utils/statusCode');
+const responseMessage = require('../module/utils/responseMessage');
+const authUtil = require('../module/utils/authUtil');
+
+const User = require('../model/User');
+
+router.get('/', (req, res) => {
+  User.read().then(({
       code,
       json
   }) => {

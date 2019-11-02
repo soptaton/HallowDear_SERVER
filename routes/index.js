@@ -1,7 +1,7 @@
 const express = require('express'); 
 const router = express.Router();
 
-router.use('/rewards', require('./rewards'));
+router.use('/user', require('./info'));
 router.use('/products', require('./products'));
 router.use('/users', require('./users'));
 
