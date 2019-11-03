@@ -1,10 +1,12 @@
-## 솝커톤 2th
----------
+# 솝커톤 2th
 
+## 시연 영상
 <a href="https://imgflip.com/gif/3f60kr"><img src="https://i.imgflip.com/3f60kr.gif" title="made at imgflip.com"/></a>
 
+## 소개
 <a href="https://ibb.co/Mp1fGMP"><img src="https://i.ibb.co/4MS2YP4/2019-11-04-2-35-29.png" alt="2019-11-04-2-35-29" border="0"></a>
 
+## 어플리케이션 기능
 |메인화면|선물하기1|선물하기2|선물하기3|
 |:--:|:---:|:---:|:---:|
 |<a href="https://ibb.co/qWV0pgp"><img src="https://i.ibb.co/4Y3spSp/image5.png" alt="image5" border="0"></a>|<a href="https://ibb.co/J523BGj"><img src="https://i.ibb.co/yW54fZF/image8.png" alt="image8" border="0"></a>|<a href="https://ibb.co/XYk31gR"><img src="https://i.ibb.co/5KxnmyH/image9.png" alt="image9" border="0"></a>|<a href="https://ibb.co/4Nd97NN"><img src="https://i.ibb.co/Lp5b8pp/image10-2.png" alt="image10-2" border="0"></a>|
