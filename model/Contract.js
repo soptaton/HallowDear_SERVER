@@ -35,12 +35,12 @@ const contract = {
         name,
         userIdx,
         price,
-        givePerson,
+        point,
         date,
         productIdx
     }) => {
         return new Promise(async(resolve,reject) => {
-            if(!name ||!userIdx ||!price || !givePerson || !date || !productIdx){
+            if(!name ||!userIdx ||!price || !point || !date || !productIdx){
                 resolve({
                     code: statusCode.NOT_FOUND,
                     json: authUtil.successFalse(
@@ -48,8 +48,8 @@ const contract = {
                     )
                 });
             } 
-            const postContractQuery = 'INSERT INTO contract(name, userIdx, price, givePerson, date, productIdx) VALUES (?, ?, ?, ?, ?, ?)';
-            const postContractResult = await db.queryParam_Parse(postContractQuery,[name, userIdx, price, givePerson, date, productIdx]);
+            const postContractQuery = 'INSERT INTO contract(name, userIdx, price, point, date, productIdx) VALUES (?, ?, ?, ?, ?, ?)';
+            const postContractResult = await db.queryParam_Parse(postContractQuery,[name, userIdx, price, point, date, productIdx]);
             if(!postContractResult){
                 resolve({
                     code: statusCode.NOT_FOUND,
@@ -64,6 +64,24 @@ const contract = {
             )});
         });
     },
+
+    update: ({contractIdx, point_ont}) => {
+        const table = 'contract';
+        const point = point_ont
+        const query = `UPDATE ${table} SET point = ${point}  WHERE contractIdx = ${contractIdx}`;
+        return pool.queryParam_None(query)
+        . then(result => {
+            console.log(result);
+            return{
+                code: statusCode.OK,
+                json: authUtil.successTrue(responseMessage.X_UPDATE_SUCCESS)
+            };
+        })
+        .catch(err => {
+            console.log(err);
+            throw err;
+        });
+    }
 }
 
 module.exports = contract;

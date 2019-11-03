@@ -3,7 +3,7 @@ const responseMessage = require('../module/utils/responseMessage');
 const authUtil = require('../module/utils/authUtil');
 
 const db = require('../module/db/pool');
-const productData = require('../module/data/ProductData');
+const productData = require('../module/data/productData');
 
 const THIS_LOG = "product"
 
